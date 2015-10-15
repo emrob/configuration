@@ -9,10 +9,6 @@
     CLUSTER_NAME: 'ecommerce'
   roles:
     - role: nginx
-      nginx_sites:
-        - ecommerce
-      nginx_default_sites:
-        - ecommerce
     - aws
     - ecommerce
     - role: datadog
