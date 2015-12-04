@@ -48,6 +48,7 @@
 
 - name: build virtualenv
   pip: 
+    name: "pip"
     virtualenv: "{{ course_discovery_venv_dir }}"
     extra_args: "--python=python3.5"
     state: present
