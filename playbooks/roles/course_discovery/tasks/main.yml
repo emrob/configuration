@@ -47,7 +47,10 @@
     - install:system-requirements
 
 - name: build virtualenv
-  shell: "virtualenv --python=python3.5 {{ course_discovery_venv_dir }}"
+  pip: 
+    virtualenv: "{{ course_discovery_venv_dir }}"
+    extra_args: "--python=python3.5"
+    state: present
   sudo_user: "{{ course_discovery_user }}"
   tags:
     - install
